@@ -49,7 +49,7 @@ void iterateProcesses(void) {
 }
 
 void sigHandler(int sig) {
-  printf("you hit Ctrl-C\n");
+  cout << "you hit Ctrl-C";
   exit(0);
 }
 
