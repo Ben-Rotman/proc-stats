@@ -17,23 +17,16 @@ static void getStatus(pid_t pid) {
   char procpath[100];
   char buf[100];
   int pfd;
-
   char Name[100];
-
   FILE * proc;
 
   sprintf(procpath, "/proc/%d/status", pid);
-
   proc = fopen(procpath, "r");
   if (proc) {
-
     fgets(buf, 256, proc);
     sscanf(buf, "Name:\t%s", Name);
-
   }
-  printf("%s", Name);
   cout << Name << endl;
-
 }
 
 void iterateProcesses(void) {
